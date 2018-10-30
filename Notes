@@ -1,0 +1,35 @@
+Install 2 plugins from Visual Studio:
+1. Productivity power tools
+2. Web Essentails 2013.5
+3. Resharper
+
+
+How To extract core use cases from requirment Document
+---------Use cases in order---------
+1. Add a gig
+2. My Upcoming gigs, All Upcoming Gigs( to calendar)
+3. Edit a gig, Remove a gig, add gig to a calendar, follow artist
+4. View gig i am attending, Who i am following,gig feed
+4.Remove a gig from calendar, unfollow artist
+
+Define a User Experience
+1. Keep it simple
+2. Ignore perfection
+
+-Code first Migration---
+in Visual studio->tools->Library Package manager->package manager console->write 
+"enable-migrations"
+NOTE: By doing this ,this will automate the migartion and Entity framework will update the schema and we don'yt have to manually modify tables
+
+2.  add-migration 
+Note:This will create a file whose startimg with curerent timestamp which include many database operations
+
+3. update-database
+Note: this command will update the database  with inital migration
+
+Note: To view the database ,Click on show all files icon. In AppData folder, mdf file will be there, open the file and you can see the database
+in server explorer on left side TAB.
+
+
+
+
