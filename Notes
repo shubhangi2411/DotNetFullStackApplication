@@ -31,6 +31,27 @@ Note: To view the database ,Click on show all files icon. In AppData folder, mdf
 in server explorer on left side TAB.
 
 ----------Creating Domain Classes-------------
+1. Gig.cs
+2. Genre.cs
+
+------Once these 2 classes are created,---------------
+run command in package manager console to add Gig Table
+"add-migration CreateGigTable"
+
+**How to add custom db fields in Identitymodel.cs
+
+ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public DbSet<Gig> Gigs { get; set; }
+        public DbSet<Genre> Genre { get; set; }
+        ..................
+        }
+        
+Now run the /migration command again
+"add-migration CreateGigTable -force"
+
+Now run the update DATABASE command 
+update-database
 
 
 
