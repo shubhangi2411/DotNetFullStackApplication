@@ -30,6 +30,8 @@ Note: this command will update the database  with inital migration
 Note: To view the database ,Click on show all files icon. In AppData folder, mdf file will be there, open the file and you can see the database
 in server explorer on left side TAB.
 
+----------Creating Domain Classes-------------
+
 
 
 
