@@ -1,6 +1,6 @@
 using System;
 
-namespace FullStackPluralsight.Models
+namespace FullStackApplication.Models
 {
     public class Gig
     {
