@@ -53,6 +53,20 @@ Now run the /migration command again
 Now run the update DATABASE command 
 update-database
 
+-------------31 Nov notes------------
+add Empty migration, using console
+"add-migration PopulateGenreTable"
+Note: this command will create a migration file with empty Up() and Down() method.
+------------To Populate the database---------- 
+In Migrations folder->PopulateGenreTable file
 
+In UP() method we can use SQL("") method to execute any scripts
+Down() method is used when we have to downgrade database i.e, it will default go to last migration OR we can spcify target migration
+
+GOOD PRACTISE: Whenever we populate UP() method, always write the reverse query in Down() Method
+For Ex: If we add INSERT Query in UP() METHOD, ADD DELETE that data query in Down() Method.
+
+After adding Query to migration file...RUN update-database Command
+ 
 
 
