@@ -54,6 +54,7 @@ Now run the update DATABASE command
 update-database
 
 -------------31 Nov notes------------
+**********HOW TO ADD DATA IN DATABASE**************
 add Empty migration, using console
 "add-migration PopulateGenreTable"
 Note: this command will create a migration file with empty Up() and Down() method.
@@ -67,6 +68,7 @@ GOOD PRACTISE: Whenever we populate UP() method, always write the reverse query 
 For Ex: If we add INSERT Query in UP() METHOD, ADD DELETE that data query in Down() Method.
 
 After adding Query to migration file...RUN update-database Command
+***************ADDING DATA TO DATABASE CODE ENDS********************
  
 
 
