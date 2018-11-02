@@ -69,6 +69,24 @@ For Ex: If we add INSERT Query in UP() METHOD, ADD DELETE that data query in Dow
 
 After adding Query to migration file...RUN update-database Command
 ***************ADDING DATA TO DATABASE CODE ENDS********************
- 
 
+PTR:
+1. Build simple domain model
+2. aim for small code-first migration
+3. commit to the repository often
+3. use shortcuts   (Ctrl+D=> to dublicate line few times
+5. Evaluate all scenrios and list out the Pros and Cons
+ *********Its your job to make design decisions**************
+ 
+ 
+ ---------------ADding a basic view-------------
+ 1. Add a controller named as Gigs 
+ Note: When we add a new control, a new folder withncontroller name is created in Views folder.
+ 2. Add a Create View in Gigs folder inder VIEWS Folder
+ 
+ To Add View link, In _Layout.html page add the link appropriately
+ For Ex:
+  <li>@Html.ActionLink("Add a Gig", "Create", "Gigs")</li>
+ 
+ TIP: For Designing forms, Use getbootsrap.com
 
