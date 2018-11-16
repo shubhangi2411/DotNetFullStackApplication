@@ -197,10 +197,6 @@
     <Compile Include="ViewModel\GigFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104.mdf" />
-    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104_log.ldf">
-      <DependentUpon>aspnet-FullStackApplication-20181028111104.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -305,7 +301,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Gigs\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
