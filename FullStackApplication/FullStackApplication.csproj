@@ -207,10 +207,6 @@
     <Compile Include="ViewModel\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104.mdf" />
-    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104_log.ldf">
-      <DependentUpon>aspnet-FullStackApplication-20181028111104.mdf</DependentUpon>
-    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -269,6 +265,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\logo1.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\logo3.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="bin\FullStackApplication.dll.config" />
@@ -316,7 +315,7 @@
     <Content Include="Views\Gigs\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="images\" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
