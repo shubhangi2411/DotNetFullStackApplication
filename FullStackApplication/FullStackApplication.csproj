@@ -181,6 +181,14 @@
     <Compile Include="Migrations\201811080952431_populatedatabase.Designer.cs">
       <DependentUpon>201811080952431_populatedatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811171718525_column added.cs" />
+    <Compile Include="Migrations\201811171718525_column added.Designer.cs">
+      <DependentUpon>201811171718525_column added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811171748590_addForeignKey.cs" />
+    <Compile Include="Migrations\201811171748590_addForeignKey.Designer.cs">
+      <DependentUpon>201811171748590_addForeignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -194,9 +202,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\FutureDate.cs" />
     <Compile Include="ViewModel\GigFormViewModel.cs" />
+    <Compile Include="ViewModel\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104.mdf" />
+    <Content Include="App_Data\aspnet-FullStackApplication-20181028111104_log.ldf">
+      <DependentUpon>aspnet-FullStackApplication-20181028111104.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
     <Content Include="bin\EntityFramework.dll" />
@@ -302,7 +316,7 @@
     <Content Include="Views\Gigs\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -320,6 +334,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811080952431_populatedatabase.resx">
       <DependentUpon>201811080952431_populatedatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811171718525_column added.resx">
+      <DependentUpon>201811171718525_column added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811171748590_addForeignKey.resx">
+      <DependentUpon>201811171748590_addForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
