@@ -1,0 +1,57 @@
+ Link to create database connection suing Command propt
+ https://www.mssqltips.com/sqlservertip/2694/getting-started-with-sql-server-2012-express-localdb/
+ 
+ 
+ ******************************************Treeview Implementation***************************
+ 
+ 
+        private void PopulateTreeView()
+        {
+
+            DataSet parentmenu = getParentNodeFromDb(0, 1);
+            menuTreeView.Nodes.Clear();
+
+            foreach (DataRow dr in parentmenu.Tables[0].Rows)
+            {
+
+                System.Web.UI.WebControls.TreeNode tnParent = new System.Web.UI.WebControls.TreeNode();
+
+                tnParent.Text = dr["MenuName"].ToString();
+
+                tnParent.Value = dr["MenuName"].ToString();
+                menuTreeView.Nodes.Add(tnParent);
+                DataSet childmenu = getParentNodeFromDb(1, 0);
+
+                FillChild(tnParent, childmenu);
+
+            }
+
+
+        }
+        
+        ------------------------------------------------------------
+        
+         public void FillChild(
+                System.Web.UI.WebControls.TreeNode parent, DataSet childmenu)
+        {
+
+
+
+            //parent.ChildNodes.Clear();
+
+            System.Web.UI.WebControls.TreeNode child = new
+                System.Web.UI.WebControls.TreeNode();
+
+            foreach (DataRow dr in childmenu.Tables[0].Rows)
+            {
+
+
+                child.Text = dr["MenuName"].ToString().Trim();
+
+                child.Value = dr["MenuName"].ToString().Trim();
+            }
+
+            parent.ChildNodes.Add(child);
+        }
+        --------------------------------------------------------------
+        
