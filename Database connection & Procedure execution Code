@@ -1,0 +1,47 @@
+public class DBHelper
+    {
+        public static DataSet GetDataSet(string spName, params object[] paramValues)
+        {
+            DataSet ds = new DataSet();
+            try
+            {
+                SqlConnection objSqlConnection = new SqlConnection(getConnectionString());
+                SqlCommand objSqlCommand = new SqlCommand(spName, objSqlConnection);
+                objSqlCommand.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter objDataAdapter = null;
+               
+
+                objSqlConnection.Open();
+                SqlCommandBuilder.DeriveParameters(objSqlCommand);
+
+                for (int i = 1, j = 0; i < objSqlCommand.Parameters.Count && j < paramValues.Length; i++, j++)
+                {
+                    SqlParameter p = objSqlCommand.Parameters[i];
+                    objSqlCommand.Parameters.AddWithValue(p.ParameterName.ToString(), paramValues[j] ?? (object)DBNull.Value);
+                }
+
+                for (int k = 0; k < paramValues.Length; k++)
+                {
+                    if (objSqlCommand.Parameters[k].Value == null)
+                    {
+                        objSqlCommand.Parameters.RemoveAt(k);
+                        k--;
+                    }
+                }
+
+                objDataAdapter = new SqlDataAdapter(objSqlCommand);
+                objDataAdapter.Fill(ds);
+                objSqlConnection.Close();             
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return ds;
+        }
+        public static string getConnectionString()
+        {
+            return ConfigurationManager.AppSettings["LocalConnString"];
+        }
+    }
