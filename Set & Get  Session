@@ -1,5 +1,0 @@
-----------Set Session
-Session["dsMappingProfileData"] = dsMappingProfileData;
-
-----------Get Session
-dsMappingData = (DataSet)Session["dsMappingProfileData"];
